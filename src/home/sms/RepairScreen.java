@@ -53,17 +53,28 @@ public void addNew (WebDriver driver)
 	WebElement savingPartFaulty = driver.findElement(By.id("btnSave"));
 	savingPartFaulty.click();
 	
+	WebElement closingPartFaulty = driver.findElement(By.id("DefaultContent_ucAddEditRepair_btnExit"));
+	closingPartFaulty.click();
+	
 	//Thread.sleep(2000);
 	
 	//WebElement savingPartFaulty1 = driver.findElement(By.id("btnSave"));
 	//savingPartFaulty1.click();
 	
 	Thread.sleep(2000);
+	
 	WebElement enterEnggRemarks = driver.findElement(By.id("DefaultContent_txtEnggRemarks"));
 	enterEnggRemarks.sendKeys("tp");
 	
 	WebElement submitingOnRepair = driver.findElement(By.id("DefaultContent_btnSubmit"));
 	submitingOnRepair.click();
+	
+	Thread.sleep(2000);
+	
+	WebElement okRepair = driver.findElement(By.xpath(".//*[@id='DefaultContent_btnPnlMessageClose']"));
+	okRepair.click();
+	
+	
 	
 	} catch (InterruptedException e) {
 		// TODO Auto-generated catch block

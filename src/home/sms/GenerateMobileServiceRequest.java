@@ -13,7 +13,7 @@ public class GenerateMobileServiceRequest {
 		try {
 
 			WebElement imeino = driver.findElement(By.id("DefaultContent_txtIMEINo"));
-			imeino.sendKeys("464569698325341");
+			imeino.sendKeys("435456332534196");
 
 			WebElement goclick = driver.findElement(By.id("DefaultContent_btnGo"));
 			goclick.click();
@@ -43,8 +43,8 @@ public class GenerateMobileServiceRequest {
 			js.executeScript("$('#DefaultContent_CalendarExtender3_today').trigger('click')", datecl);
 			
 
-			WebElement imeiSecondaryno = driver.findElement(By.id("DefaultContent_txtSecondaryIMEI"));
-			imeiSecondaryno.sendKeys(new String[] { "123654789656783" });
+			//WebElement imeiSecondaryno = driver.findElement(By.id("DefaultContent_txtSecondaryIMEI"));
+			//imeiSecondaryno.sendKeys(new String[] { "123654789656783" });
 
 			Select submittedBy = new Select(driver.findElement(By.id("DefaultContent_ddlSubmittedBy")));
 			submittedBy.selectByVisibleText("Customer");

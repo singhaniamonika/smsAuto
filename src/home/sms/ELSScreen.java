@@ -14,6 +14,15 @@ public void elsPass(WebDriver driver)
 	WebElement elsPassRadoio = driver.findElement(By.id("DefaultContent_rbnStatus_0"));
 	elsPassRadoio.click();
 	
+	Thread.sleep(3000);
+	
+	
+	WebElement estimatedAmount = driver.findElement(By.id("DefaultContent_txtEstimate"));
+	estimatedAmount.sendKeys("888");
+	
+	WebElement approved	 = driver.findElement(By.id("DefaultContent_rbnApproved"));
+	approved.click();
+	
 	WebElement submitELS = driver.findElement(By.id("DefaultContent_btnSubmit"));
 	submitELS.click();
 	

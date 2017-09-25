@@ -17,15 +17,8 @@ public class OpenBrowser {
 		driver.get("http://sms.demos.rvsolutions.in/rvLogin.aspx");
 		System.out.print("opened");
 		
-		WebElement userid = driver.findElement(By.id("FormPlaceHolder_txtLoginName"));
-		userid.sendKeys("shn123");
-		
-		WebElement password = driver.findElement(By.id("FormPlaceHolder_txtPassword"));
-		password.sendKeys("1");
-		
-		WebElement submit = driver.findElement(By.id("FormPlaceHolder_btnSave"));
-		submit.click();
-		
+		Login login = new Login();
+		login.aspLogin1(driver);
 		
 		Thread.sleep(3000);
 		
@@ -37,7 +30,7 @@ public class OpenBrowser {
 		generateNewRequest.click();
 		
 		Select mobileBrandDropdown = new Select(driver.findElement(By.id("ddlBrandTop")));
-		mobileBrandDropdown.selectByVisibleText("Ziox Mobiles");
+		mobileBrandDropdown.selectByVisibleText("HAIER MOBILE");
 		
 		
 		GenerateMobileServiceRequest generateMobileServiceRequest = new GenerateMobileServiceRequest();
@@ -65,6 +58,17 @@ public class OpenBrowser {
 		
 		RepairScreen repairScreen = new RepairScreen();
 		repairScreen.addNew(driver);
+		
+		Thread.sleep(3000);
+		
+		
+		WebElement aspLogout = driver.findElement(By.id("lnkLogout"));
+		aspLogout.click();
+		
+		Thread.sleep(3000);
+		
+		login.centralwarehouseLogin1(driver);
+		
 		
 		
 		
